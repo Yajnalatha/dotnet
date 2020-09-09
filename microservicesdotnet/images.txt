@@ -1,0 +1,8 @@
+aiindevops.azurecr.io/msbuild:0.1
+aiindevops.azurecr.io/git-secrets:0.1
+docker/compose:1.25.0-rc2
+aiindevops.azurecr.io/clair-scanner:0.1
+aiindevops.azurecr.io/kube-audit:0.1
+aiindevops.azurecr.io/docker-kubectl:19.03-alpine
+docker:18.09
+aiindevops.azurecr.io/eshopwebmvc:3.0

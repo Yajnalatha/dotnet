@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: eshopwebmvc
+  name: eshopwebmvc
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: eshopwebmvc
+    spec:
+      imagePullSecrets:
+        - name: gcrcred
+      containers:
+      - env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Development
+        image: localhost:32121/root/docker_registry/eshopwebmvc:4.1
+        imagePullPolicy: Always
+        name: eshopwebmvc
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}
